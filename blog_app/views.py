@@ -4,7 +4,7 @@ from blog_app.models import Blog
 # Create your views here.
 
 def blogView(request):
-    blogs=Blog.objects.order_by('-date')[:3]
+    blogs=Blog.objects.all()
     return render(request,'blog_app/blog.html',{'blogs':blogs})
 
 
